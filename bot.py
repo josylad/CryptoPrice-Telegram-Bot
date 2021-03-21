@@ -34,7 +34,7 @@ def price_finder(message):
 			crypto_data = crypto_requests.json()
 			coin_price = crypto_data["data"]["lastPrice_usd-n"]
 			coin_name = crypto_data["name"]
-			response = '{} - {} \n ${} \n group chat'.format(coin_symbol,coin_name,coin_price,)
+			response = '{} - {} \n ${} \n'.format(coin_symbol,coin_name,coin_price,)
 			bot.reply_to(message, response)
 		
 		except Exception as e:
