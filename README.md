@@ -1,5 +1,6 @@
 # CryptoPrice - Cryptocurrencies Price Checker Telegram Bot 
 ⭐️⭐️**Star** the project.
+
 Bot is available at https://t.me/cryptostatsbot
 
 ### **This project was built using Python 3.8 and [pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/)** 
