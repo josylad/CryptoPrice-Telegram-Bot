@@ -25,7 +25,7 @@ def send_welcome(message):
 @bot.message_handler(commands=['price', 'p', 'waves'])
 def price_finder(message):
 	
-	if message.chat.type == "group":
+	if message.chat.type == "group" or message.chat.type == "supergroup":
 		try:
 			query = message.text.split()
 			coin_symbol = query[1].upper()
@@ -46,6 +46,7 @@ def price_finder(message):
 
 # this handles messages in private chats with the bot 
 @bot.message_handler(regexp='')
+@bot.message_handler(commands=['price', 'p', 'waves'])
 def price_finder(message):
 	if message.chat.type == "private":
 		try:
