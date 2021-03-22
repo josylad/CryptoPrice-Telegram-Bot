@@ -25,22 +25,22 @@ def send_welcome(message):
 @bot.message_handler(commands=['price', 'p', 'waves'])
 def price_finder(message):
 	
-	# if message.chat.type == "group":
-	try:
-		query = message.text.split()
-		coin_symbol = query[1].upper()
-		print(coin_symbol)
-		crypto_requests = requests.get("https://wavescap.com/api/asset/{}.json".format(coin_symbol))
-		crypto_data = crypto_requests.json()
-		coin_price = crypto_data["data"]["lastPrice_usd-n"]
-		coin_name = crypto_data["name"]
-		response = '{} - {} \n ${} \n'.format(coin_symbol,coin_name,coin_price,)
-		bot.reply_to(message, response)
-	
-	except Exception as e:
-		print(e)
-		response = "Sorry, We do not support this Token/Coin at this Time\n\n Enter '/price Coin Symbol' or Shortcode to get started\n E.g, '/price BTC', ETH, NSBT"
-		bot.reply_to(message, response)
+	if message.chat.type == "group":
+		try:
+			query = message.text.split()
+			coin_symbol = query[1].upper()
+			print(coin_symbol)
+			crypto_requests = requests.get("https://wavescap.com/api/asset/{}.json".format(coin_symbol))
+			crypto_data = crypto_requests.json()
+			coin_price = crypto_data["data"]["lastPrice_usd-n"]
+			coin_name = crypto_data["name"]
+			response = '{} - {} \n ${} \n'.format(coin_symbol,coin_name,coin_price,)
+			bot.reply_to(message, response)
+		
+		except Exception as e:
+			print(e)
+			response = "Sorry, We do not support this Token/Coin at this Time\n\n Enter '/price Coin Symbol' or Shortcode to get started\n E.g, '/price BTC', ETH, NSBT"
+			bot.reply_to(message, response)
 
 
 
