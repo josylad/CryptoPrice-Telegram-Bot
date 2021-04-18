@@ -35,6 +35,7 @@ def price_finder(message):
 			coin_price = crypto_data["data"]["lastPrice_usd-n"]
 			round_coin_price = round(coin_price,7)
 			coin_name = crypto_data["name"]
+			volume = crypto_data["24h_vol_usd-n"]
 			response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
 			bot.reply_to(message, response, disable_web_page_preview=True)
 		
@@ -53,6 +54,7 @@ def price_finder(message):
 			crypto_data = crypto_requests.json()
 			coin_price = crypto_data["data"]["lastPrice_usd-n"]
 			round_coin_price = round(coin_price,7)
+			volume = crypto_data["24h_vol_usd-n"]
 			coin_name = crypto_data["name"]
 			response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
 			bot.reply_to(message, response, disable_web_page_preview=True)
