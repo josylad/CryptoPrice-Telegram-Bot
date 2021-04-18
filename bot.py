@@ -33,14 +33,15 @@ def price_finder(message):
 			crypto_requests = requests.get("https://wavescap.com/api/asset/{}.json".format(coin_symbol))
 			crypto_data = crypto_requests.json()
 			coin_price = crypto_data["data"]["lastPrice_usd-n"]
+			round_coin_price = round(coin_price,7)
 			coin_name = crypto_data["name"]
-			response = '{} - {} \n ${} \n'.format(coin_symbol,coin_name,coin_price,)
-			bot.reply_to(message, response)
+			response = '{} - {} \n \n Price: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,)
+			bot.reply_to(message, response, disable_web_page_preview=True)
 		
 		except Exception as e:
 			print(e)
-			response = "Sorry, We do not support this Token/Coin at this Time\n\n Enter '/price Coin Symbol' or Shortcode to get started\n E.g, '/price BTC', ETH, NSBT"
-			bot.reply_to(message, response)
+			response = '''Sorry, We do not support this Token/Coin at this Time\n\n Enter '/price Coin Symbol' or Shortcode to get started\n E.g, '/price BTC', ETH, NSBT \n\n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'''
+			bot.reply_to(message, response, disable_web_page_preview=True)
 
 
 	if message.chat.type == "private":
@@ -51,14 +52,15 @@ def price_finder(message):
 			crypto_requests = requests.get("https://wavescap.com/api/asset/{}.json".format(coin_symbol))
 			crypto_data = crypto_requests.json()
 			coin_price = crypto_data["data"]["lastPrice_usd-n"]
+			round_coin_price = round(coin_price,7)
 			coin_name = crypto_data["name"]
-			response = '{} - {} \n ${} \n'.format(coin_symbol,coin_name,coin_price,)
-			bot.reply_to(message, response)
+			response = '{} - {} \n \n Price: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,)
+			bot.reply_to(message, response, disable_web_page_preview=True)
 		
 		except Exception as e:
 			print(e)
-			response = "Sorry, We do not support this Token/Coin at this Time\n\n Enter '/price Coin Symbol' or Shortcode to get started\n E.g, '/price BTC', ETH, NSBT"
-			bot.reply_to(message, response)
+			response = '''Sorry, We do not support this Token/Coin at this Time\n\n Enter '/price Coin Symbol' or Shortcode to get started\n E.g, '/price BTC', ETH, NSBT \n\n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'''
+			bot.reply_to(message, response, disable_web_page_preview=True)
 
 
 
@@ -72,13 +74,15 @@ def price_finder(message):
 			crypto_requests = requests.get("https://wavescap.com/api/asset/{}.json".format(coin_symbol))
 			crypto_data = crypto_requests.json()
 			coin_price = crypto_data["data"]["lastPrice_usd-n"]
+			volume = crypto_data["24h_vol_usd-n"]
+			round_coin_price = round(coin_price,7)
 			coin_name = crypto_data["name"]
-			response = '{} - {} \n ${} \n '.format(coin_symbol,coin_name,coin_price,)
-			bot.reply_to(message, response)
+			response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
+			bot.reply_to(message, response, disable_web_page_preview=True)
 		except Exception as e:
 			print(e)
-			response = "Sorry, We do not support this Token/Coin at this Time\n\n Enter Coin Symbol or Shortcode to get started\n E.g, BTC, ETH, NSBT"
-			bot.reply_to(message, response)
+			response = '''Sorry, We do not support this Token/Coin at this Time\n\n Enter '/price Coin Symbol' or Shortcode to get started\n E.g, '/price BTC', ETH, NSBT \n\n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'''
+			bot.reply_to(message, response, disable_web_page_preview=True)
 
 	
 		
@@ -96,4 +100,4 @@ def price_finder(message):
 # - timeout: integer (default 20) - Timeout in seconds for long polling.
 
 
-bot.polling()
+bot.polling(none_stop=True)
