@@ -205,6 +205,6 @@ def price_finder(message):
 # - interval: True/False (default False) - The interval between polling requests
 #           Note: Editing this parameter harms the bot's response time
 # - timeout: integer (default 20) - Timeout in seconds for long polling.
-bot.delete_webhook()
+
 
 bot.polling(none_stop=True)
