@@ -89,16 +89,15 @@ def price_finder(message):
 				session = Session()
 				session.headers.update(headers)
 
-
-				response = session.get(cmc_url)
-				data = json.loads(response.text)
-				# print(data)
-
-				if data["amountAsset"] == "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9":
-					coin_name = 'FROE'
-					print(coin_name)
-
 				try:
+					response = session.get(cmc_url)
+					data = json.loads(response.text)
+					# print(data)
+
+					if data["amountAsset"] == "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9":
+						coin_name = 'FROE'
+						print(coin_name)
+
 					price = data['data']["lastPrice"]
 					volume = data['data']["volume"]
 					round_coin_price = round(price,7)
@@ -185,16 +184,15 @@ def price_finder(message):
 				session = Session()
 				session.headers.update(headers)
 
-
-				response = session.get(cmc_url)
-				data = json.loads(response.text)
-				# print(data)
-
-				if data["amountAsset"] == "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9":
-					coin_name = 'FROE'
-					print(coin_name)
-
 				try:
+					response = session.get(cmc_url)
+					data = json.loads(response.text)
+					# print(data)
+
+					if data["amountAsset"] == "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9":
+						coin_name = 'FROE'
+						print(coin_name)
+
 					price = data['data']["lastPrice"]
 					volume = data['data']["volume"]
 					round_coin_price = round(price,7)
@@ -280,16 +278,15 @@ def price_finder(message):
 				session = Session()
 				session.headers.update(headers)
 
-
-				response = session.get(cmc_url)
-				data = json.loads(response.text)
-				# print(data)
-
-				if data["amountAsset"] == "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9":
-					coin_name = 'FROE'
-					print(coin_name)
-
 				try:
+					response = session.get(cmc_url)
+					data = json.loads(response.text)
+					# print(data)
+
+					if data["amountAsset"] == "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9":
+						coin_name = 'FROE'
+						print(coin_name)
+
 					price = data['data']["lastPrice"]
 					volume = data['data']["volume"]
 					round_coin_price = round(price,7)
