@@ -79,6 +79,7 @@ def price_finder(message):
 					coin_symbol = "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9"
 					print(coin_symbol)
 					ticker = 'ROE'
+					coin_name = 'FROE'
 
 				cmc_url = 'https://api.wavesplatform.com/v0/pairs/{}/DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p'.format(coin_symbol)
 
@@ -95,9 +96,6 @@ def price_finder(message):
 					data = json.loads(response.text)
 					# print(data)
 
-					if data["amountAsset"] == "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9":
-						coin_name = 'ROE'
-						print(coin_name)
 
 					price = data['data']["lastPrice"]
 					volume = data['data']["volume"]
@@ -175,6 +173,7 @@ def price_finder(message):
 					coin_symbol = "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9"
 					print(coin_symbol)
 					ticker = 'ROE'
+					coin_name = "FROE"
 
 				cmc_url = 'https://api.wavesplatform.com/v0/pairs/{}/DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p'.format(coin_symbol)
 
@@ -191,9 +190,6 @@ def price_finder(message):
 					data = json.loads(response.text)
 					# print(data)
 
-					if data["amountAsset"] == "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9":
-						coin_name = 'ROE'
-						print(coin_name)
 
 					price = data['data']["lastPrice"]
 					volume = data['data']["volume"]
@@ -266,10 +262,11 @@ def price_finder(message):
 			except Exception as e:
 				print(e)
 				print("At fore part")
-				if coin_symbol == "FROE":
+				if coin_symbol == "ROE":
 					coin_symbol = "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9"
 					print(coin_symbol)
 					ticker = 'ROE'
+					coin_name = "FROE"
 
 				cmc_url = 'https://api.wavesplatform.com/v0/pairs/{}/DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p'.format(coin_symbol)
 
@@ -286,9 +283,6 @@ def price_finder(message):
 					data = json.loads(response.text)
 					# print(data)
 
-					if data["amountAsset"] == "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9":
-						coin_name = 'FROE'
-						print(coin_name)
 
 					price = data['data']["lastPrice"]
 					volume = data['data']["volume"]
