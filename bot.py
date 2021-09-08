@@ -78,6 +78,7 @@ def price_finder(message):
 				if coin_symbol == "FROE":
 					coin_symbol = "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9"
 					print(coin_symbol)
+					ticker = 'ROE'
 
 				cmc_url = 'https://api.wavesplatform.com/v0/pairs/{}/DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p'.format(coin_symbol)
 
@@ -102,7 +103,7 @@ def price_finder(message):
 					volume = data['data']["volume"]
 					round_coin_price = round(price,7)
 
-					response = '<b>{}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance </a>'.format(coin_name,round_coin_price,volume)
+					response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance </a>'.format(ticker, coin_name,round_coin_price,volume)
 					bot.reply_to(message, response, disable_web_page_preview=True)
 
 
@@ -173,6 +174,7 @@ def price_finder(message):
 				if coin_symbol == "FROE":
 					coin_symbol = "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9"
 					print(coin_symbol)
+					ticker = 'ROE'
 
 				cmc_url = 'https://api.wavesplatform.com/v0/pairs/{}/DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p'.format(coin_symbol)
 
@@ -197,7 +199,7 @@ def price_finder(message):
 					volume = data['data']["volume"]
 					round_coin_price = round(price,7)
 
-					response = '<b>{}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance </a>'.format(coin_name,round_coin_price,volume)
+					response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance </a>'.format(ticker,coin_name,round_coin_price,volume)
 					bot.reply_to(message, response, disable_web_page_preview=True)
 
 
@@ -267,6 +269,7 @@ def price_finder(message):
 				if coin_symbol == "FROE":
 					coin_symbol = "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9"
 					print(coin_symbol)
+					ticker = 'ROE'
 
 				cmc_url = 'https://api.wavesplatform.com/v0/pairs/{}/DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p'.format(coin_symbol)
 
@@ -291,7 +294,7 @@ def price_finder(message):
 					volume = data['data']["volume"]
 					round_coin_price = round(price,7)
 
-					response = '<b>{}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance </a>'.format(coin_name,round_coin_price,volume)
+					response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance </a>'.format(ticker,coin_name,round_coin_price,volume)
 					bot.reply_to(message, response, disable_web_page_preview=True)
 
 
