@@ -75,7 +75,7 @@ def price_finder(message):
 			except Exception as e:
 				print(e)
 				print("At fore part")
-				if coin_symbol == "FROE":
+				if coin_symbol == "ROE":
 					coin_symbol = "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9"
 					print(coin_symbol)
 					ticker = 'ROE'
@@ -96,7 +96,7 @@ def price_finder(message):
 					# print(data)
 
 					if data["amountAsset"] == "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9":
-						coin_name = 'FROE'
+						coin_name = 'ROE'
 						print(coin_name)
 
 					price = data['data']["lastPrice"]
@@ -171,7 +171,7 @@ def price_finder(message):
 			except Exception as e:
 				print(e)
 				print("At fore part")
-				if coin_symbol == "FROE":
+				if coin_symbol == "ROE":
 					coin_symbol = "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9"
 					print(coin_symbol)
 					ticker = 'ROE'
@@ -192,7 +192,7 @@ def price_finder(message):
 					# print(data)
 
 					if data["amountAsset"] == "A4h9aifPtz371noBA1Khi2Eb4L3Vzf8LC8PtF4QysEd9":
-						coin_name = 'FROE'
+						coin_name = 'ROE'
 						print(coin_name)
 
 					price = data['data']["lastPrice"]
