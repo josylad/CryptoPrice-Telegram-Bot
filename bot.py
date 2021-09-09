@@ -98,7 +98,7 @@ def price_finder(message):
 
 
 					price = data['data']["lastPrice"]
-					volume = data['data']["volume"]
+					volume = data['data']["quoteVolume"]
 					round_coin_price = round(price,7)
 
 					response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance </a>'.format(ticker, coin_name,round_coin_price,volume)
@@ -192,7 +192,7 @@ def price_finder(message):
 
 
 					price = data['data']["lastPrice"]
-					volume = data['data']["volume"]
+					volume = data['data']["quoteVolume"]
 					round_coin_price = round(price,7)
 
 					response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance </a>'.format(ticker,coin_name,round_coin_price,volume)
@@ -285,7 +285,7 @@ def price_finder(message):
 
 
 					price = data['data']["lastPrice"]
-					volume = data['data']["volume"]
+					volume = data['data']["quoteVolume"]
 					round_coin_price = round(price,7)
 
 					response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance </a>'.format(ticker,coin_name,round_coin_price,volume)
