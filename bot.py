@@ -43,7 +43,8 @@ def price_finder(message):
 			percent_change = round(percent_change_float, 2)
 			round_coin_price = round(coin_price,5)
 			coin_name = crypto_data["name"]
-			volume = crypto_data["24h_vol_usd-n"]
+			volume_full = crypto_data["24h_vol_usd-n"]
+			volume = round(volume_full,5)
 			response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h Change: {}% \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
 			bot.reply_to(message, response, disable_web_page_preview=True)
 
@@ -138,7 +139,8 @@ def price_finder(message):
 			percent_change_float = (float(coin_price) / float(first_price) - 1) * 100
 			percent_change = round(percent_change_float,2)
 			round_coin_price = round(coin_price,5)
-			volume = crypto_data["24h_vol_usd-n"]
+			volume_full = crypto_data["24h_vol_usd-n"]
+			volume = round(volume_full,5)
 			coin_name = crypto_data["name"]
 			response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h Change: {}% \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
 			bot.reply_to(message, response, disable_web_page_preview=True)
@@ -234,7 +236,8 @@ def price_finder(message):
 			first_price = crypto_data["data"]["firstPrice_usd-n"]
 			percent_change_float = (float(coin_price) / float(first_price) - 1) * 100
 			percent_change = round(percent_change_float,2)
-			volume = crypto_data["24h_vol_usd-n"]
+			volume_full = crypto_data["24h_vol_usd-n"]
+			volume = round(volume_full,5)
 			round_coin_price = round(coin_price,5)
 			coin_name = crypto_data["name"]
 			response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h Change: {}% \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
