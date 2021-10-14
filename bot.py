@@ -38,10 +38,13 @@ def price_finder(message):
 			crypto_requests = requests.get("https://wavescap.com/api/asset/{}.json".format(coin_symbol))
 			crypto_data = crypto_requests.json()
 			coin_price = crypto_data["data"]["lastPrice_usd-n"]
-			round_coin_price = round(coin_price,7)
+			first_price = crypto_data["data"]["firstPrice_usd-n"]
+			percent_change_float = (float(coin_price) / float(first_price) - 1) * 100
+			percent_change = round(percent_change_float, 2)
+			round_coin_price = round(coin_price,5)
 			coin_name = crypto_data["name"]
 			volume = crypto_data["24h_vol_usd-n"]
-			response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
+			response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h Change: {}% \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
 			bot.reply_to(message, response, disable_web_page_preview=True)
 
 		except Exception as e:
@@ -63,7 +66,7 @@ def price_finder(message):
 				data = json.loads(response.text)
 				price = data['data'][coin_symbol]['quote']['USD']['price']
 				volume = data['data'][coin_symbol]['quote']['USD']['volume_24h']
-				round_coin_price = round(price,7)
+				round_coin_price = round(price,5)
 				coin_name = data['data'][coin_symbol]['name']
 				
 				response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
@@ -99,7 +102,7 @@ def price_finder(message):
 
 					price = data['data']["lastPrice"]
 					volume = data['data']["quoteVolume"]
-					round_coin_price = round(price,7)
+					round_coin_price = round(price,5)
 
 					response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance </a>'.format(ticker, coin_name,round_coin_price,volume)
 					bot.reply_to(message, response, disable_web_page_preview=True)
@@ -131,10 +134,13 @@ def price_finder(message):
 			crypto_requests = requests.get("https://wavescap.com/api/asset/{}.json".format(coin_symbol))
 			crypto_data = crypto_requests.json()
 			coin_price = crypto_data["data"]["lastPrice_usd-n"]
-			round_coin_price = round(coin_price,7)
+			first_price = crypto_data["data"]["firstPrice_usd-n"]
+			percent_change_float = (float(coin_price) / float(first_price) - 1) * 100
+			percent_change = round(percent_change_float,2)
+			round_coin_price = round(coin_price,5)
 			volume = crypto_data["24h_vol_usd-n"]
 			coin_name = crypto_data["name"]
-			response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
+			response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h Change: {}% \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
 			bot.reply_to(message, response, disable_web_page_preview=True)
 		
 
@@ -157,7 +163,7 @@ def price_finder(message):
 				data = json.loads(response.text)
 				price = data['data'][coin_symbol]['quote']['USD']['price']
 				volume = data['data'][coin_symbol]['quote']['USD']['volume_24h']
-				round_coin_price = round(price,7)
+				round_coin_price = round(price,5)
 				coin_name = data['data'][coin_symbol]['name']
 				
 				response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
@@ -193,7 +199,7 @@ def price_finder(message):
 
 					price = data['data']["lastPrice"]
 					volume = data['data']["quoteVolume"]
-					round_coin_price = round(price,7)
+					round_coin_price = round(price,5)
 
 					response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance </a>'.format(ticker,coin_name,round_coin_price,volume)
 					bot.reply_to(message, response, disable_web_page_preview=True)
@@ -225,10 +231,13 @@ def price_finder(message):
 			crypto_requests = requests.get("https://wavescap.com/api/asset/{}.json".format(coin_symbol))
 			crypto_data = crypto_requests.json()
 			coin_price = crypto_data["data"]["lastPrice_usd-n"]
+			first_price = crypto_data["data"]["firstPrice_usd-n"]
+			percent_change_float = (float(coin_price) / float(first_price) - 1) * 100
+			percent_change = round(percent_change_float,2)
 			volume = crypto_data["24h_vol_usd-n"]
-			round_coin_price = round(coin_price,7)
+			round_coin_price = round(coin_price,5)
 			coin_name = crypto_data["name"]
-			response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
+			response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h Change: {}% \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
 			bot.reply_to(message, response, disable_web_page_preview=True)
 
 		except Exception as e:
@@ -250,7 +259,7 @@ def price_finder(message):
 				data = json.loads(response.text)
 				price = data['data'][coin_symbol]['quote']['USD']['price']
 				volume = data['data'][coin_symbol]['quote']['USD']['volume_24h']
-				round_coin_price = round(price,7)
+				round_coin_price = round(price,5)
 				coin_name = data['data'][coin_symbol]['name']
 				
 				response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
@@ -286,7 +295,7 @@ def price_finder(message):
 
 					price = data['data']["lastPrice"]
 					volume = data['data']["quoteVolume"]
-					round_coin_price = round(price,7)
+					round_coin_price = round(price,5)
 
 					response = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance </a>'.format(ticker,coin_name,round_coin_price,volume)
 					bot.reply_to(message, response, disable_web_page_preview=True)
