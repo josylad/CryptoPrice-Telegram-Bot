@@ -45,10 +45,10 @@ def price_finder(message):
 			coin_name = crypto_data["name"]
 			volume_full = crypto_data["24h_vol_usd-n"]
 			volume = round(volume_full,5)
-			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
-			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.lopeer.com/affiliate-program/">💰 Earn Free Bitcoin with Lopeer Affiliate</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
-			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.lopeer.com">💰 Start P2P Crypto Trading with Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
-			response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://muna.app">💰 Enjoy Crypto savings with daily interest on Muna</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
+			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
+			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/affiliate-program/">💰 Earn Free Bitcoin with Lopeer Affiliate</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com">💰 Start P2P Crypto Trading with Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://muna.app">💰 Enjoy Crypto savings with daily interest on Muna</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
 			response = random.choice([response1, response2, response3, response4])
 			bot.reply_to(message, response, disable_web_page_preview=True)
 
@@ -154,9 +154,9 @@ def price_finder(message):
 			volume_full = crypto_data["24h_vol_usd-n"]
 			volume = round(volume_full,5)
 			coin_name = crypto_data["name"]
-			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
-			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.lopeer.com/affiliate-program/">💰 Earn Free Bitcoin with Lopeer Affiliate</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
-			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.lopeer.com">💰 Start P2P Crypto Trading with Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
+			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/affiliate-program/">💰 Earn Free Bitcoin with Lopeer Affiliate</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com">💰 Start P2P Crypto Trading with Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
 			response = random.choice([response1, response2, response3])
 			bot.reply_to(message, response, disable_web_page_preview=True)
 		
@@ -261,9 +261,9 @@ def price_finder(message):
 			volume = round(volume_full,5)
 			round_coin_price = round(coin_price,5)
 			coin_name = crypto_data["name"]
-			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
-			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.lopeer.com/affiliate-program/">💰 Earn Free Bitcoin with Lopeer Affiliate</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
-			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.lopeer.com">💰 Start P2P Crypto Trading with Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
+			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/affiliate-program/">💰 Earn Free Bitcoin with Lopeer Affiliate</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com">💰 Start P2P Crypto Trading with Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
 			response = random.choice([response1, response2, response3])
 			bot.reply_to(message, response, disable_web_page_preview=True)
 
