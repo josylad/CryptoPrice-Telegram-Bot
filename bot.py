@@ -71,7 +71,7 @@ def price_finder(message):
 				data = json.loads(response.text)
 				price = data['data'][coin_symbol]['quote']['USD']['price']
 				volume = data['data'][coin_symbol]['quote']['USD']['volume_24h']
-				round_coin_price = round(price,5)
+				round_coin_price = round(price,10)
 				coin_name = data['data'][coin_symbol]['name']
 				
 				response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
@@ -180,7 +180,7 @@ def price_finder(message):
 				data = json.loads(response.text)
 				price = data['data'][coin_symbol]['quote']['USD']['price']
 				volume = data['data'][coin_symbol]['quote']['USD']['volume_24h']
-				round_coin_price = round(price,5)
+				round_coin_price = round(price,10)
 				coin_name = data['data'][coin_symbol]['name']
 				
 				response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
@@ -286,7 +286,7 @@ def price_finder(message):
 				data = json.loads(response.text)
 				price = data['data'][coin_symbol]['quote']['USD']['price']
 				volume = data['data'][coin_symbol]['quote']['USD']['volume_24h']
-				round_coin_price = round(price,5)
+				round_coin_price = round(price,10)
 				coin_name = data['data'][coin_symbol]['name']
 				
 				response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume)
