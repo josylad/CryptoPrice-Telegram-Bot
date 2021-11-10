@@ -73,7 +73,7 @@ def price_finder(message):
 				volume = data['data'][coin_symbol]['quote']['USD']['volume_24h']
 				percent_change = data['data'][coin_symbol]['quote']['USD']['percent_change_24h']
 
-				round_coin_price = round(price,15)
+				round_coin_price = round(price,18)
 				coin_name = data['data'][coin_symbol]['name']
 				
 				response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}%  \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
@@ -183,7 +183,7 @@ def price_finder(message):
 				price = data['data'][coin_symbol]['quote']['USD']['price']
 				volume = data['data'][coin_symbol]['quote']['USD']['volume_24h']
 				percent_change = data['data'][coin_symbol]['quote']['USD']['percent_change_24h']
-				round_coin_price = round(price,15)
+				round_coin_price = round(price,18)
 				coin_name = data['data'][coin_symbol]['name']
 				
 				response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
@@ -290,7 +290,7 @@ def price_finder(message):
 				price = data['data'][coin_symbol]['quote']['USD']['price']
 				volume = data['data'][coin_symbol]['quote']['USD']['volume_24h']
 				percent_change = data['data'][coin_symbol]['quote']['USD']['percent_change_24h']
-				round_coin_price = round(price,15)
+				round_coin_price = round(price,18)
 				coin_name = data['data'][coin_symbol]['name']
 				
 				response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.binance.com/en/register?ref=UM7SAUZG">💰 Trade Crypto on Binance (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
