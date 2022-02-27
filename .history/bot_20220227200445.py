@@ -161,7 +161,7 @@ def price_finder(message):
 			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/affiliate-program/">💰 Earn Free Bitcoin with Lopeer Affiliate</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
 			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com">💰 Start P2P Crypto Trading with Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
 			response = random.choice([response2, response3])
-			bot.reply_to(message, response, disable_web_page_preview=True)
+			bot.reply_to(message, response4, disable_web_page_preview=True)
 		
 
 		except Exception as e:
