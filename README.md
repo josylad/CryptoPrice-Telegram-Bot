@@ -62,7 +62,7 @@ Link:-> ```https://github.com/josylad/CryptoPrice-Telegram-Bot```
 run: 
 * $ python3 bot.py 
 
-# Technologies Used
+## Technologies Used
 
 * Python 3.8
 * pyTelegramBotAPI
