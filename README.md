@@ -69,7 +69,7 @@ run:
 
 
 
-# AUTHOR
+## AUTHOR
 
 * Joseph Adediji 
 
