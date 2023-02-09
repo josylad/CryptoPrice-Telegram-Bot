@@ -45,11 +45,11 @@ def price_finder(message):
 			coin_name = crypto_data["name"]
 			volume_full = crypto_data["24h_vol_usdt"]
 			volume = round(volume_full,5)
-			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android">💰 Trade Crypto on Lopeer P2P</a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
-			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Earn Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-			response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://muna.app">💰 Enjoy Crypto savings with daily interest on Muna</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-			response = random.choice([response2, response3, response1])
+			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Trade Crypto on Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
+			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Earn Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Buy & Sell USDT on Lopeer.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Enjoy Crypto savings with daily interest on Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response = random.choice([response4, response3, response1])
 			bot.reply_to(message, response, disable_web_page_preview=True)
 
 		except Exception as e:
@@ -76,11 +76,11 @@ def price_finder(message):
 				round_coin_price = round(price,18)
 				coin_name = data['data'][coin_symbol]['name']
 				
-				response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android">💰 Trade Crypto on Lopeer P2P</a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
-				response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-				response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-				response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://muna.app">💰 Enjoy Crypto savings with daily interest on Muna</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-				response = random.choice([response2, response3, response1])
+				response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Trade Crypto on Lopeer.</a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
+				response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+				response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+				response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Enjoy Crypto savings with daily interest on Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+				response = random.choice([response4, response3, response1])
 				bot.reply_to(message, response, disable_web_page_preview=True)
 
 		
@@ -115,17 +115,17 @@ def price_finder(message):
 					volume = data['data']["quoteVolume"]
 					round_coin_price = round(price,5)
 
-					response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android">💰 Trade Crypto with Lopeer P2P </a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
-					response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-					response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-					response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://muna.app">💰 Enjoy Crypto savings with daily interest on Muna</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-					response = random.choice([response2, response3, response1])
+					response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Trade Crypto with Lopeer. </a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
+					response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+					response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+					response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Enjoy Crypto savings with daily interest on Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+					response = random.choice([response4, response3, response1])
 					bot.reply_to(message, response, disable_web_page_preview=True)
 
 
 				except (Exception, KeyError) as e:
 					print(e)
-					response = '''Sorry, We do not support this Token/Coin at this Time\n\n Enter '/price Coin Symbol' or Shortcode to get started\n E.g, '/price BTC', ETH, NSBT \n\n <a href="https://www.lopeer.com/download/android/">💰 Buy & Sell Waves, USDN, BTC, USDT with Lopeer P2P.</a>'''
+					response = '''Sorry, We do not support this Token/Coin at this Time\n\n Enter '/price Coin Symbol' or Shortcode to get started\n E.g, '/price BTC', ETH, NSBT \n\n <a href="https://onelink.to/e6jquz/">💰 Buy & Sell USDT with Naira.</a>'''
 					bot.reply_to(message, response, disable_web_page_preview=True)
 
 
@@ -156,11 +156,11 @@ def price_finder(message):
 			volume_full = crypto_data["24h_vol_usdt"]
 			volume = round(volume_full,5)
 			coin_name = crypto_data["name"]
-			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android">💰 Trade Crypto with Lopeer P2P (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
-			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-			response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://muna.app">💰 Enjoy Crypto savings with daily interest on Muna</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-			response = random.choice([response2, response3, response1])
+			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Trade Crypto with Lopeer.</a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
+			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Enjoy Crypto savings with daily interest on Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response = random.choice([response4, response3, response1])
 			bot.reply_to(message, response, disable_web_page_preview=True)
 		
 
@@ -187,11 +187,11 @@ def price_finder(message):
 				round_coin_price = round(price,18)
 				coin_name = data['data'][coin_symbol]['name']
 				
-				response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android">💰 Trade Crypto on Lopeer P2P </a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
-				response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-				response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-				response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://muna.app">💰 Enjoy Crypto savings with daily interest on Muna</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-				response = random.choice([response2, response3, response1])
+				response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Trade Crypto on Lopeer. </a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
+				response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+				response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Buy & Sell Crypto with Lopeer.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+				response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Enjoy Crypto savings with daily interest on Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+				response = random.choice([response4, response3, response1])
 				bot.reply_to(message, response, disable_web_page_preview=True)
 
 		
@@ -226,11 +226,11 @@ def price_finder(message):
 					volume = data['data']["quoteVolume"]
 					round_coin_price = round(price,5)
 
-					response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android">💰 Trade Crypto on Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
-					response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-					response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-					response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://muna.app">💰 Enjoy Crypto savings with daily interest on Muna</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-					response = random.choice([response2, response3, response1])
+					response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Trade Crypto on Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
+					response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+					response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+					response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Enjoy Crypto savings with daily interest on Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+					response = random.choice([response4, response3, response1])
 					bot.reply_to(message, response, disable_web_page_preview=True)
 
 
@@ -267,11 +267,11 @@ def price_finder(message):
 			volume = round(volume_full,5)
 			round_coin_price = round(coin_price,5)
 			coin_name = crypto_data["name"]
-			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android">💰 Trade Crypto with Lopeer P2P </a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
-			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-			response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://muna.app">💰 Enjoy Crypto savings with daily interest on Muna</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-			response = random.choice([response2, response3, response1])
+			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Trade Crypto with Lopeer P2P </a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
+			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Enjoy Crypto savings with daily interest on Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+			response = random.choice([response4, response3, response1])
 			bot.reply_to(message, response, disable_web_page_preview=True)
 
 		except Exception as e:
@@ -297,11 +297,11 @@ def price_finder(message):
 				round_coin_price = round(price,18)
 				coin_name = data['data'][coin_symbol]['name']
 				
-				response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android">💰 Trade Crypto on Lopeer </a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
-				response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-				response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-				response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://muna.app">💰 Enjoy Crypto savings with daily interest on Muna</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-				response = random.choice([response2, response3, response1])
+				response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Trade Crypto on Lopeer </a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
+				response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Earn Free Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+				response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Buy & Sell Crypto with Lopeer.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+				response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Enjoy Crypto savings with daily interest on Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+				response = random.choice([response4, response3, response1])
 				bot.reply_to(message, response, disable_web_page_preview=True)
 
 		
@@ -336,17 +336,17 @@ def price_finder(message):
 					volume = data['data']["quoteVolume"]
 					round_coin_price = round(price,5)
 
-					response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android">💰 Trade Crypto on Lopeer </a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
-					response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Earn Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-					response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-					response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://muna.app">💰 Enjoy Crypto savings with daily interest on Muna</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
-					response = random.choice([response2, response3, response1])
+					response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Trade Crypto on Lopeer </a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
+					response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Earn Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+					response3 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz/">💰 Buy & Sell Crypto with Lopeer.</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+					response4 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://onelink.to/e6jquz">💰 Enjoy Crypto savings with daily interest on Lopeer</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
+					response = random.choice([response4, response3, response1])
 					bot.reply_to(message, response, disable_web_page_preview=True)
 
 
 				except (Exception, KeyError) as e:
 					print(e)
-					response = '''Sorry, We do not support this Token/Coin at this Time\n\n Enter '/price Coin Symbol' or Shortcode to get started\n E.g, '/price BTC', ETH, NSBT \n\n <a href="https://www.lopeer.com/download/android/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'''
+					response = '''Sorry, We do not support this Token/Coin at this Time\n\n Enter '/price Coin Symbol' or Shortcode to get started\n E.g, '/price BTC', ETH, NSBT \n\n <a href="https://onelink.to/e6jquz/">💰 Buy & Sell Crypto with Lopeer P2P.</a>'''
 					bot.reply_to(message, response, disable_web_page_preview=True)
 
 
