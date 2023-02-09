@@ -37,13 +37,13 @@ def price_finder(message):
 			
 			crypto_requests = requests.get("https://wavescap.com/api/asset/{}.json".format(coin_symbol))
 			crypto_data = crypto_requests.json()
-			coin_price = crypto_data["data"]["lastPrice_usd-n"]
-			first_price = crypto_data["data"]["firstPrice_usd-n"]
+			coin_price = crypto_data["data"]["lastPrice_usdt"]
+			first_price = crypto_data["data"]["firstPrice_usdt"]
 			percent_change_float = (float(coin_price) / float(first_price) - 1) * 100
 			percent_change = round(percent_change_float, 2)
 			round_coin_price = round(coin_price,5)
 			coin_name = crypto_data["name"]
-			volume_full = crypto_data["24h_vol_usd-n"]
+			volume_full = crypto_data["24h_vol_usdt"]
 			volume = round(volume_full,5)
 			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android">💰 Trade Crypto on Lopeer P2P</a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
 			response2 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android/">💰 Earn Crypto with Lopeer Affiliate Program</a>'.format(coin_symbol,coin_name,round_coin_price,volume, percent_change)
@@ -148,12 +148,12 @@ def price_finder(message):
 			
 			crypto_requests = requests.get("https://wavescap.com/api/asset/{}.json".format(coin_symbol))
 			crypto_data = crypto_requests.json()
-			coin_price = crypto_data["data"]["lastPrice_usd-n"]
-			first_price = crypto_data["data"]["firstPrice_usd-n"]
+			coin_price = crypto_data["data"]["lastPrice_usdt"]
+			first_price = crypto_data["data"]["firstPrice_usdt"]
 			percent_change_float = (float(coin_price) / float(first_price) - 1) * 100
 			percent_change = round(percent_change_float,2)
 			round_coin_price = round(coin_price,5)
-			volume_full = crypto_data["24h_vol_usd-n"]
+			volume_full = crypto_data["24h_vol_usdt"]
 			volume = round(volume_full,5)
 			coin_name = crypto_data["name"]
 			response1 = '<b>{} - {}</b> \n Price: ${} USD \n 24h volume: ${} USD \n 24h change: {}% \n \n <a href="https://www.lopeer.com/download/android">💰 Trade Crypto with Lopeer P2P (-10% transaction fee)</a>'.format(coin_symbol,coin_name,round_coin_price,volume,percent_change)
@@ -259,11 +259,11 @@ def price_finder(message):
 			
 			crypto_requests = requests.get("https://wavescap.com/api/asset/{}.json".format(coin_symbol))
 			crypto_data = crypto_requests.json()
-			coin_price = crypto_data["data"]["lastPrice_usd-n"]
-			first_price = crypto_data["data"]["firstPrice_usd-n"]
+			coin_price = crypto_data["data"]["lastPrice_usdt"]
+			first_price = crypto_data["data"]["firstPrice_usdt"]
 			percent_change_float = (float(coin_price) / float(first_price) - 1) * 100
 			percent_change = round(percent_change_float,2)
-			volume_full = crypto_data["24h_vol_usd-n"]
+			volume_full = crypto_data["24h_vol_usdt"]
 			volume = round(volume_full,5)
 			round_coin_price = round(coin_price,5)
 			coin_name = crypto_data["name"]
